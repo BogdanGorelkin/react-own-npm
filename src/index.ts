@@ -1,12 +1,18 @@
-import { useEffect } from "react"
+import { useAttemptsListener } from './useAttemptsListener'
+import { useFetchData } from './useFetchData'
+import { useTestEffect } from './useTestEffect' 
+import { useTestState } from './useTestState'
 
-export function useTestEffect(formData: any) {
-  useEffect(() => {
-    const test = setInterval(() => {
-      console.log('aaa')
-    }, 1000)
-    return () => {
-      clearInterval(test)
-    }
-  }, [])
+export {
+    useAttemptsListener,
+    useFetchData,
+    useTestEffect,
+    useTestState
 }
+
+// export enum ConstsTest {
+//     AAA = "AAA",
+//     BBB = "BBB",
+//     CCC = "CCC",
+// }
+  
